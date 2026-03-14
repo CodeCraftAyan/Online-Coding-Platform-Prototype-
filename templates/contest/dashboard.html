@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{contest.title}}</h2>
+
+<h3>Problems</h3>
+
+<table>
+
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Action</th>
+</tr>
+
+{% for problem in problems %}
+
+<tr>
+
+<td>{{problem.order}}</td>
+
+<td>{{problem.title}}</td>
+
+<td>
+<a href="/problems/{{problem.id}}/">Open</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/scoreboard/{{contest.id}}/">View Scoreboard</a>
+
+{% endblock %}

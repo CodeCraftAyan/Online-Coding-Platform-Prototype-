@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Submission Result</h2>
+
+<p><b>Problem:</b> {{submission.problem.title}}</p>
+
+<p><b>Verdict:</b> {{submission.verdict}}</p>
+
+<p><b>Time:</b> {{submission.time}}</p>
+
+<p><b>Memory:</b> {{submission.memory}}</p>
+
+<hr>
+
+<h3>Code</h3>
+
+<pre>
+{{submission.code}}
+</pre>
+
+<h3>Testcases</h3>
+
+<table>
+<tr>
+<th>#</th>
+<th>Status</th>
+<th>Time</th>
+</tr>
+
+{% for tc in testcases %}
+
+<tr>
+<td>{{tc.testcase_number}}</td>
+<td>{{tc.status}}</td>
+<td>{{tc.time}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+{% endblock %}

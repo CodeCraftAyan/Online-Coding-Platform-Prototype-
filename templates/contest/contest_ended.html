@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ contest.title }}</h2>
+
+<h3>Contest Has Ended</h3>
+
+<p>
+This contest ended at:
+<strong>{{ contest.end_time }}</strong>
+</p>
+
+<p>You can no longer participate in this contest.</p>
+
+<a href="/">Back to Contests</a>
+
+{% endblock %}

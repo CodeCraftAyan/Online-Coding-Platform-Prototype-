@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ contest.title }}</h2>
+
+<h3>Contest Not Started Yet</h3>
+
+<p>
+This contest will start at:
+<strong>{{ contest.start_time }}</strong>
+</p>
+
+<p>Please come back later when the contest begins.</p>
+
+<a href="/">Back to Contests</a>
+
+{% endblock %}
